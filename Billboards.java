@@ -7,7 +7,7 @@ public class Billboards {
 
     public static void main(String[] args) {
         Integer[] revenues = {5, 6, 4, 0, 1, 0, 5};
-        System.out.println(billboards(5, new ArrayList<>(Arrays.asList(revenues))));
+        System.out.println(billboards(5, Arrays.asList(revenues)));
     }
 
     static int billboards(int k, List<Integer> revenue) {
