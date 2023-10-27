@@ -4,6 +4,23 @@ import java.util.List;
 
 public class Palindrome {
 
+    /**
+     * Given a linked list of integers, determine if the list represents a palindrome
+     * (same values both forward and reverse). Linked list implementation provided below
+     *
+     */
+
+    public static void main(String[] args) {
+        ListNode node1 = new ListNode(-1);
+        ListNode node2 = node1.addNode(0);
+        ListNode node3 = node2.addNode(-1);
+
+
+        printValues(node1);
+        System.out.println(isListPalindrome(node1));
+    }
+
+    //Implement this method
     public static boolean isListPalindrome(ListNode node) {
         if (node != null) {
             List<Integer> array = new ArrayList<>();
@@ -17,16 +34,6 @@ public class Palindrome {
             return array.equals(reversed);
         }
         return false;
-    }
-
-    public static void main(String[] args) {
-        ListNode node1 = new ListNode(-1);
-        ListNode node2 = node1.addNode(0);
-        ListNode node3 = node2.addNode(-1);
-
-
-        printValues(node1);
-        System.out.println(isListPalindrome(node1));
     }
 
     static void printValues(ListNode node) {

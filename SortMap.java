@@ -6,6 +6,11 @@ public class SortMap {
         printList(sortMap(map, -1));
     }
 
+    /**
+     * Simple method to sort the contents of a HashMap by key (ascending or descending) and return the contents (K, V)
+     * as an array. Also contains a utility to generate a random Map of specified size.
+     *
+     * */
     static List<Map.Entry<Integer, String>> sortMap(Map<Integer, String>  map, int... descending){
         List<Map.Entry<Integer, String>> list = new LinkedList<>(map.entrySet());
         if (descending.length > 0) {
