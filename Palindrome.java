@@ -1,32 +1,61 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.io.*;
+import java.util.*;
+
+/**
+ * Given a singly linked list of integers, determine whether or not it's a palindrome.
+ *
+ * Example
+ * For l = [0, 1, 0], the output should be
+ * isListPalindrome(l) = true;
+ *
+ * For l = [1, 2, 2, 3], the output should be
+ * isListPalindrome(l) = false.
+ *
+ * Input/Output
+ *
+ * [time limit] 3000ms (java)
+ *
+ * [input] linkedlist.integer l
+ * A singly linked list of integers.
+ *
+ * Guaranteed constraints:
+ * 0 ≤ list size ≤ 5 · 105,
+ * -109 ≤ element value ≤ 109.
+ *
+ * [output] boolean
+ * Return true if l is a palindrome, otherwise return false.
+ *
+ *
+ * Sample Test case
+ * l: [0, 1, 0]
+ * Expected Output:
+ * true
+ *
+ */
 
 public class Palindrome {
 
-    /**
-     * Given a linked list of integers, determine if the list represents a palindrome
-     * (same values both forward and reverse). Linked list implementation provided below
-     *
-     */
+    // Definition for singly-linked list:
+    public static class ListNode<T> {
+        ListNode(T x) {
+            value = x;
+        }
 
-    public static void main(String[] args) {
-        ListNode node1 = new ListNode(-1);
-        ListNode node2 = node1.addNode(0);
-        ListNode node3 = node2.addNode(-1);
+        T value;
+        ListNode<T> next;
 
-
-        printValues(node1);
-        System.out.println(isListPalindrome(node1));
+        ListNode<T> addNode(T t) {
+            next = new ListNode<>(t);
+            return next;
+        }
     }
 
-    //Implement this method
-    public static boolean isListPalindrome(ListNode node) {
+    public static boolean isListPalindrome(ListNode<Integer> node) {
         if (node != null) {
             List<Integer> array = new ArrayList<>();
-            array.add(node.val);
+            array.add(node.value);
             while (node.next != null) {
-                array.add(node.next.val);
+                array.add(node.next.value);
                 node = node.next;
             }
             List<Integer> reversed = new ArrayList<>(array);
@@ -36,23 +65,26 @@ public class Palindrome {
         return false;
     }
 
-    static void printValues(ListNode node) {
-        System.out.println(node.val);
-        if (node.next != null) {
-            printValues(node.next);
-        }
-    }
+    public static void main(String[] args) {
+        ListNode<Integer> node =
+                new ListNode<>(-2);
+        node.addNode(1)
+                .addNode(0)
+                .addNode(-3)
+                .addNode(0)
+                .addNode(1)
+                .addNode(-2);
 
-    public static class ListNode {
-        ListNode next;
-        Integer val;
-        ListNode(int valIn) {
-            val = valIn;
-        }
-        ListNode addNode(int valIn) {
-            ListNode newNode = new ListNode(valIn);
-            next = newNode;
-            return newNode;
-        }
+        System.out.println("First test,  expecting true : " + isListPalindrome(node));
+
+        node = new ListNode<>(-2);
+        node.addNode(1)
+                .addNode(0)
+                .addNode(-3)
+                .addNode(0)
+                .addNode(1)
+                .addNode(-1);
+
+        System.out.println("Second test, expecting false: " + isListPalindrome(node));
     }
 }

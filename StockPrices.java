@@ -1,16 +1,11 @@
+/**
+ * given an array of int where the values are stock prices throughout the day
+ * find the best trade, max profit
+ * requirement: buy needs to occur before sell
+ */
 public class StockPrices {
 
-    /**
-     * Given an array of the price of a stock throughout the day, what are the best prices to buy and sell the stock
-     * to achieve the maximum profit. Buy must come before Sell.
-     *
-     */
-    public static void main(String[] args) {
-        int[] prices = {1,2,1,2,3,5,1501,2000,1000,1500,10};
-        System.out.println(findMaxProfit(prices));
-    }
-
-    static int findMaxProfit(int[] prices) {
+    public static int maxProfit(final int[] prices) {
         if (prices == null || prices.length == 0) {
             return 0;
         }
@@ -22,4 +17,34 @@ public class StockPrices {
         }
         return maxProfit;
     }
+
+    public static void main(String[] args) {
+        int[][] inputs = {
+                {4000,5000,1,19,6,5},
+                {},
+                {1000},
+                {40,50,60,70,60,50,10,80,140,10,50},
+                {5000,4000,3000,2000,1000},
+                {533,100,400,600,10, 599}
+        };
+
+        int[] expected = {
+                1000,
+                0,
+                0,
+                130,
+                0,
+                589
+        };
+
+        for (int i = 0; i < expected.length; i++) {
+            final int maxProfit = maxProfit(inputs[i]);
+            if(maxProfit == expected[i]){
+                System.out.println("TEST " + (i+1) + " ----> SUCCESS");
+            } else {
+                System.out.println("TEST " + (i+1) + " ----> FAIL : Expected " + expected[i] + " Received " + maxProfit );
+            }
+        }
+    }
 }
+
