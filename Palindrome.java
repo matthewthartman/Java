@@ -1,6 +1,3 @@
-import java.io.*;
-import java.util.*;
-
 /**
  * Given a singly linked list of integers, determine whether or not it's a palindrome.
  *
@@ -31,7 +28,10 @@ import java.util.*;
  * Expected Output:
  * true
  *
- */
+*/
+
+import java.io.*;
+import java.util.*;
 
 public class Palindrome {
 
