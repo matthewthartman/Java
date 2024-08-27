@@ -1,3 +1,14 @@
+/**
+ * Harold is a kidnapper who wrote a ransom note, but now he is worried it will be traced back to him through
+ * his handwriting. He found a magazine and wants to know if he can cut out whole words from it and use them to
+ * create an untraceable replica of his ransom note. The words in his note are case-sensitive and he must use
+ * only whole words available in the magazine. He cannot use substrings or concatenation to create the
+ * words he needs.
+ *
+ * Given the words in the magazine and the words in the ransom note, print Yes if he can replicate his
+ * ransom note exactly using whole words from the magazine. Otherwise, print No.
+*/
+
 import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Hashtable;
@@ -6,17 +17,6 @@ import java.util.Map;
 
 public class RansomNote {
 
-    /**
-     * Harold is a kidnapper who wrote a ransom note, but now he is worried it will be traced back to him through
-     * his handwriting. He found a magazine and wants to know if he can cut out whole words from it and use them to
-     * create an untraceable replica of his ransom note. The words in his note are case-sensitive and he must use
-     * only whole words available in the magazine. He cannot use substrings or concatenation to create the
-     * words he needs.
-     *
-     * Given the words in the magazine and the words in the ransom note, print Yes if he can replicate his
-     * ransom note exactly using whole words from the magazine. Otherwise, print No.
-     *
-     */
     public static void main(String[] args) {
         String[] magazine = {"Two", "times", "three", "is", "not", "four", "Two"},
         note = {"two", "times", "two", "is", "four"};
