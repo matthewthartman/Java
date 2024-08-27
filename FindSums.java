@@ -1,7 +1,3 @@
-/*
- * Click `Run` to execute the snippet below!
- */
-
 /**
  * Given an array of unique numbers and a target number, determine all possible combinations of input numbers that
  * can be added together to equal the target number. Numbers from the input array can be used more than once in a
