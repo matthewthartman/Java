@@ -1,8 +1,3 @@
-import org.junit.*;
-import org.junit.Test;
-import org.junit.runner.*;
-import static org.junit.Assert.*;
-
 /**
  * Summary
  * Implement a solution to convert a roman numeral into a numeric (decimal) value.
@@ -37,7 +32,12 @@ import static org.junit.Assert.*;
  * In fact, we highly recommend that you start by running the tests to review the generated output when failures occur.
  * A big portion of the evaluation is based on your ability to create an implementation that allows as many of the
  * tests to succeed.
- */
+*/
+
+import org.junit.*;
+import org.junit.Test;
+import org.junit.runner.*;
+import static org.junit.Assert.*;
 
 public class RomanNumeralsTestCase {
 
