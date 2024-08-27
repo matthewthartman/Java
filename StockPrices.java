@@ -1,8 +1,7 @@
-/**
- * given an array of int where the values are stock prices throughout the day
- * find the best trade, max profit
- * requirement: buy needs to occur before sell
- */
+/*
+ * Given an array of int where the values are stock prices throughout the day, find the best trade (max profit)
+ * Requirement: buy needs to occur before sell
+*/
 public class StockPrices {
 
     public static int maxProfit(final int[] prices) {
