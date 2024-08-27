@@ -1,8 +1,4 @@
-import java.io.*;
-import java.util.*;
-
 /**
- *
  * It is well known that nuclear launch codes work both forward and reverse,
  * meaning that code "123" is effectively the same as code "321", a major
  * security flaw which we have top people working to correct. Someone has stolen
@@ -13,10 +9,11 @@ import java.util.*;
  * codes.
  *
  * Please report the big-O runtime complexity of your solution
- *
- * @author Kyle K.
- *
- */
+*/
+
+import java.io.*;
+import java.util.*;
+
 class LaunchCodes {
 
     //Implement this method
