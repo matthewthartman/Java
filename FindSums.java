@@ -1,4 +1,4 @@
-/**
+/*
  * Given an array of unique numbers and a target number, determine all possible combinations of input numbers that
  * can be added together to equal the target number. Numbers from the input array can be used more than once in a
  * single solution.
@@ -16,7 +16,7 @@
  * [2, 3, 3]
  * [2, 6]
  * [3, 5]
- */
+*/
 
 class FindSums {
     public static void main(String[] args) {
